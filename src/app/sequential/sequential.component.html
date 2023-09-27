@@ -1,0 +1,29 @@
+<div *ngIf="isLoading" class="alert alert-info">Loading data...</div>
+
+<div *ngIf="!isLoading" class="row">
+	<div class="col-md-6">
+		<div class="card mb-3">
+			<div class="card-header fw-bold">Post Data</div>
+			<div class="card-body">
+				<h5 class="card-title">{{ postData.title }}</h5>
+				<br>
+				<p class="card-text">{{ postData.body }}</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card mb-3">
+			<div class="card-header fw-bold">User Data</div>
+			<div class="card-body">
+				<h5 class="card-title">{{ userData.name }}</h5>
+				<br>
+				<p class="card-text"><strong>Username:</strong> {{ userData.username }}</p>
+				<p class="card-text"><strong>Email:</strong> {{ userData.email }}</p>
+				<p class="card-text"><strong>Phone:</strong> {{ userData.phone }}</p>
+				<p class="card-text"><strong>Address:</strong> {{ userData.address.street }}
+					, {{ userData.address.city }}</p>
+			</div>
+		</div>
+	</div>
+</div>
